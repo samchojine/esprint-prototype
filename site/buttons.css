@@ -41,7 +41,7 @@
     --button-fill: var(--liquid-primary);
     --button-shadow: var(--liquid-selected-shadow);
     --button-radius: 17px;
-    color: #526a9b !important;
+    color: #3f4d6b !important;
   }
   .create-label { --button-radius: 19px; }
   .side button { --button-radius: 10px; }
@@ -55,7 +55,7 @@
   button[aria-pressed="true"], button[aria-expanded="true"] {
     --button-fill: var(--liquid-selected);
     --button-shadow: var(--liquid-selected-shadow);
-    color: #6079b1 !important;
+    color: #435479 !important;
   }
   .chip { --button-radius: 15px; }
   .folder { --button-radius: 999px; }
@@ -122,14 +122,14 @@
       linear-gradient(125deg, #ffffff35, #e6edf721 65%, #ece9f82b);
     --button-shadow: inset 0 1px 0 #ffffff85, inset 0 -.5px 0 #cad6ea1a;
   }
-  #language .choice-row { color: #535f7b !important; }
-  #help .faq button { color: #63708d !important; }
+  #language .choice-row { color: #404859 !important; }
+  #help .faq button { color: #495162 !important; }
   #history .history-tabs button {
     background:transparent !important;border:0 !important;box-shadow:none !important;
     backdrop-filter:none !important;-webkit-backdrop-filter:none !important;
-    color:#91a0b9 !important;--button-radius:12px;
+    color:#596881 !important;--button-radius:12px;
   }
-  #history .history-tabs button.active { color:#687fa7 !important; }
+  #history .history-tabs button.active { color:#495872 !important; }
   .support-channel { --button-radius: 22px; }
   .mine-header {
     --button-radius: 28px;
@@ -146,7 +146,7 @@
     --button-fill:
       radial-gradient(ellipse at 15% 0%, #ffffffa1, transparent 67%),
       linear-gradient(125deg, #fae7edc9, #f4dce5a1 58%, #eee2f3a6);
-    color: #ad6a7d !important;
+    color: #774856 !important;
   }
   .danger-button { --button-radius: 16px; }
   .danger-solid { --button-radius: 13px; }
@@ -155,30 +155,30 @@
     --button-fill:
       radial-gradient(ellipse at 15% 0%, #ffffffa1, transparent 67%),
       linear-gradient(125deg, #e0f0e9d1, #d3e9e0a1 58%, #e0eaf2a6);
-    color: #6c9583 !important;
+    color: #4e665c !important;
   }
   .toast-demo .warn {
     --button-fill:
       radial-gradient(ellipse at 15% 0%, #ffffffa1, transparent 67%),
       linear-gradient(125deg, #f7ecd7d1, #efe2c7a1 58%, #ede4e6a6);
-    color: #a28a5f !important;
+    color: #6e6046 !important;
   }
 
   button:disabled, [role="button"][aria-disabled="true"] {
     --button-fill: var(--liquid-muted);
     --button-shadow: inset 0 0 0 1px #ffffff80;
-    color: #9ba7be !important;
+    color: #5d6b85 !important;
     cursor: not-allowed;
     filter: saturate(.65);
   }
   @media (hover: hover) {
     button:not(:disabled):hover, [role="button"]:not([aria-disabled="true"]):hover {
-      box-shadow: var(--button-shadow, var(--liquid-shadow)), 0 4px 12px -7px #7e9ac547 !important;
+      box-shadow: var(--button-shadow, var(--liquid-shadow)), 0 4px 12px -7px rgb(var(--glass-shadow-rgb,108 129 166) / .34) !important;
     }
   }
   button:not(:disabled):active, [role="button"]:not([aria-disabled="true"]):active {
     filter: brightness(.975) saturate(1.08);
-    box-shadow: inset 0 1px 5px #8da5d12e, inset 0 0 0 1px #ffffffbd !important;
+    box-shadow: inset 0 1px 5px rgb(var(--glass-shadow-rgb,108 129 166) / .22), inset 0 0 0 1px #ffffffed !important;
   }
   /* Remove the old extra highlight pseudo-elements and soften shared shells. */
   #new .chip.active::after, #new .create-label::before { display: none !important; }
@@ -201,10 +201,10 @@
     -webkit-backdrop-filter: none !important;
     filter: none !important;
   }
-  .bottom-nav .nav-item { color: #9098ac !important; }
+  .bottom-nav .nav-item { color: #5d6476 !important; }
   .bottom-nav .nav-item.active,
   .bottom-nav .nav-item.active:not(:disabled):is(:hover, :active) {
-    color: #5d6db7 !important;
+    color: #404b7e !important;
     border-radius: 27px !important;
     background:
       radial-gradient(ellipse at 20% 0%, #ffffff85, transparent 70%),
@@ -221,7 +221,7 @@
   .catalog-category[aria-selected="true"] {
     --button-fill: var(--liquid-selected);
     --button-shadow: var(--liquid-selected-shadow);
-    color: #6079b1 !important;
+    color: #435479 !important;
   }
   .catalog-search-trigger {
     --button-radius: 18px;
@@ -230,7 +230,7 @@
     border: .75px solid #ffffff70 !important;
     backdrop-filter: blur(16px) saturate(120%) !important;
     -webkit-backdrop-filter: blur(16px) saturate(120%) !important;
-    color: #8e9bb3 !important;
+    color: #59657c !important;
     font-weight: 400;
   }
   .catalog-search-trigger:not(:disabled):is(:hover, :active) {

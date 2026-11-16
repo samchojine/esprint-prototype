@@ -28,7 +28,7 @@
 #editor .toolstrip::-webkit-scrollbar { display: none; }
 #editor .toolstrip button {
   flex: 1 1 31px; width: 31px; max-width: 33px; min-width: 0; height: 38px; padding: 0;
-  display: grid; place-items: center; color: #546788 !important;
+  display: grid; place-items: center; color: #404c60 !important;
 }
 #editor .toolstrip svg { width: 21px; height: 21px; stroke-width: 1.65; }
 #editor .tool-divider { width: 1px; flex: 0 0 1px; height: 17px; margin: 0 2px; background: #9eafc53b; }
@@ -49,7 +49,7 @@
   cursor: default;
 }
 #editor .canvas.ellipse-paper { border-radius: 50%; overflow: hidden; }
-#editor .editor-ruler { position: absolute; pointer-events: none; color: #9caac0; font-size: 7px; font-variant-numeric: tabular-nums; }
+#editor .editor-ruler { position: absolute; pointer-events: none; color: #5d6d87; font-size: 7px; font-variant-numeric: tabular-nums; }
 #editor .editor-ruler-x { left: 20px; right: 20px; height: 18px; top: 7px; display: flex; justify-content: space-between; border-bottom: .5px solid #b9c7dc52; }
 #editor .editor-ruler-x span { position: relative; min-width: 5px; text-align: center; }
 #editor .editor-ruler-x span::after { content: ''; height: 4px; width: .5px; background: #a5b5cd80; position: absolute; bottom: 0; left: 50%; }
@@ -57,7 +57,7 @@
 #editor .editor-ruler-y span::after { content: ''; position: absolute; right: 0; width: 3px; height: .5px; background: #a5b5cd80; }
 #editor .editor-object {
   position: absolute; display: grid; place-items: center; padding: 4px;
-  color: #293649; line-height: 1.2; text-align: center;
+  color: #283341; line-height: 1.2; text-align: center;
   outline: 1px solid transparent; outline-offset: 2px; border-radius: 2px;
   font-size: 16px; font-weight: 650; user-select: none; cursor: pointer;
 }
@@ -78,9 +78,9 @@
   position: static; display: flex; flex: 0 0 auto; flex-direction: row; align-items: center; gap: 2px;
   height: 30px; margin-left: 6px; padding-left: 6px; border-left: .75px solid #9eafc53b;
 }
-#editor .float-tools button { width: 30px; min-width: 0; height: 36px; padding: 5px; display: grid; place-items: center; color: #607594; }
+#editor .float-tools button { width: 30px; min-width: 0; height: 36px; padding: 5px; display: grid; place-items: center; color: #475466; }
 #editor .float-tools svg { width: 20px; height: 20px; stroke-width: 1.6; }
-#editor .editor-zoom { position: absolute; bottom: 20px; left: 23px; pointer-events: none; color: #99a8bd; font-size: 10px; font-variant-numeric: tabular-nums; }
+#editor .editor-zoom { position: absolute; bottom: 20px; left: 23px; pointer-events: none; color: #5c6d84; font-size: 10px; font-variant-numeric: tabular-nums; }
 #editor .editor-dock {
   flex: 0 0 auto; position: relative; z-index: 5;
   border-radius: 24px 24px 0 0;
@@ -111,12 +111,12 @@
 #editor .element-grid button {
   display: flex; flex-direction: column; justify-content: center; align-items: center;
   min-width: 0; height: 70px; padding: 7px 0 5px; border: 0 !important;
-  color: #5e708d; font-size: 11px; font-weight: 500; gap: 5px;
+  color: #465163; font-size: 11px; font-weight: 500; gap: 5px;
   user-select: none; -webkit-user-drag: none;
 }
 #editor .element-grid .editor-menu-icon {
   display: grid; place-items: center; width: 36px; height: 36px; margin: 0;
-  color: #5d7498; filter: none;
+  color: #455369; filter: none;
 }
 #editor .editor-menu-icon img { display: block; width: 26px; height: 26px; object-fit: contain; pointer-events: none; user-select: none; -webkit-user-drag: none; }
 #editor .editor-menu-dots { height: 23px; display: flex; justify-content: center; align-items: center; gap: 0; }
@@ -128,7 +128,7 @@
   backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
 }
 #editor .bottom-actions button { height: 46px; min-height: 46px; font-size: 14px; }
-.editor-text-input { display: block; width: 100%; min-height: 90px; margin-top: 14px; padding: 12px; resize: vertical; border: .75px solid #ffffffc7; border-radius: 13px; background: #edf2fa73; color: #536783; font: inherit; outline-color: #91a8d6; }
+.editor-text-input { display: block; width: 100%; min-height: 90px; margin-top: 14px; padding: 12px; resize: vertical; border: .75px solid #ffffffc7; border-radius: 13px; background: #edf2fa73; color: #404c5e; font: inherit; outline-color: #91a8d6; }
 @layer liquid-buttons {
   #editor .toolstrip button, #editor .float-tools button, #editor .element-grid button, #editor .editor-menu-dots button {
     --button-fill: linear-gradient(125deg, #ffffff09, #dce6f50a, #e5e0f509);

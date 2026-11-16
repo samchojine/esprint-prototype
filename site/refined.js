@@ -114,7 +114,7 @@ const mineButtons=document.querySelectorAll('#mine .mine-list button');
 mineButtons[3].onclick=()=>showModal('success','连接与打印帮助','开启打印机并靠近手机，在首页点击设备入口重新扫描。');
 mineButtons[4].onclick=()=>showModal('success','联系我们','ESPrint 官方客服邮箱及联系方式待提供。');
 mineButtons[5].onclick=()=>showModal('success','当前为原型预览','正式版本与更新地址将在发布前配置。');
-mineButtons[6].onclick=()=>showModal('success','ESPrint','标签创作与热敏打印\nLiquid Glass · V1.0.0');
+mineButtons[6].onclick=()=>showModal('success','ESPrint','标签创作与热敏打印\nLiquid Glass · V1.0.1');
 mineButtons[1].onclick=()=>showModal('success','切换语言','中文、英语、西班牙语、葡萄牙语、日语、法语、德语。');
 mineButtons[2].onclick=()=>confirm('切换为 inch？','1 inch = 25.4 mm，实际纸张尺寸不会改变。',()=>{mineButtons[2].lastElementChild.textContent='inch　›';toast('success','单位已切换为 inch')});
 
@@ -133,7 +133,7 @@ pages.splice(0,pages.length,...[
  ['login','邮箱登录'],['register','邮箱注册'],['forgot','忘记密码'],['device','设备扫描'],['device-connecting','正在连接'],['device-connect','连接成功'],['device-detail','设备详情'],['device-timeout','扫描无结果'],['device-failed','连接失败'],['feedback','统一反馈组件']
 ]);
 links.innerHTML=pages.map(([id,name])=>`<button data-page="${id}" onclick="go('${id}')">${name}</button>`).join('');
-document.querySelector('.side h2').textContent='ESPrint · V1.0.0';
+document.querySelector('.side h2').textContent='ESPrint · V1.0.1';
 document.querySelector('.side>p').textContent='普通三项底栏、错落的快捷入口与两列瀑布流。点击下方页面名，或直接操作手机内的入口体验完整路径。';
 links.insertAdjacentHTML('afterend','<p>交互原型：邮箱、验证码、设备与打印均为演示数据，不连接真实账号或硬件。</p>');
 
@@ -161,7 +161,7 @@ function runConfirm(){const fn=confirmAction;closeModal();if(fn)fn()}
 toast=function(kind,msg){
  phoneEl.querySelectorAll('.toast').forEach(el=>el.remove());
  const el=document.createElement('div');el.className='toast';el.setAttribute('role','status');el.textContent=(kind==='success'?'✓　':kind==='fail'?'×　':'!　')+msg;
- el.style.cssText=`position:absolute;left:50%;bottom:102px;transform:translateX(-50%);background:linear-gradient(135deg,#fffffff0,#f1f4fce3);color:${kind==='success'?'#68927e':kind==='fail'?'#ba7585':'#aa9064'};border:1px solid white;padding:11px 17px;border-radius:18px;box-shadow:0 7px 22px #68749d26;z-index:46;width:max-content`;
+ el.style.cssText=`position:absolute;left:50%;bottom:102px;transform:translateX(-50%);background:${kind==='success'?'linear-gradient(135deg,#fffffff0,#eaf4eee3)':kind==='fail'?'linear-gradient(135deg,#fffffff0,#f6eaf0e3)':'linear-gradient(135deg,#fffffff0,#f5f0e5e3)'};color:${kind==='success'?'#3d745a':kind==='fail'?'#9a4f64':'#846139'};border:1px solid white;padding:11px 17px;border-radius:18px;box-shadow:inset 0 1px 1px #ffffffeb,0 7px 22px ${kind==='success'?'#72978342':kind==='fail'?'#aa7a8e42':'#a18b6442'};z-index:46;width:max-content`;
  phoneEl.appendChild(el);setTimeout(()=>el.remove(),2600);
 };
 connectPrinter=function(name='ESPrint P40'){

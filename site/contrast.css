@@ -1,0 +1,101 @@
+/* Mobile readability: stronger text and glass depth, with surface-matched shadows. */
+:root {
+  --ink: #273247;
+  --muted: #5d6e86;
+  --text-disabled: #8d99ad;
+  --glass-shadow-rgb: 108 129 166;
+}
+
+/* Resolve shadow colors on each control, so a card's tint reaches its buttons. */
+:where(button, [role="button"], .template-large, .print-setting .row:first-child) {
+  --liquid-shadow:
+    inset 0 0 0 1px #ffffffed, inset 0 1px 2px #ffffff94,
+    inset 0 -1px 3px rgb(var(--glass-shadow-rgb) / .17),
+    0 5px 12px -6px rgb(var(--glass-shadow-rgb) / .34);
+  --liquid-selected-shadow:
+    inset 0 0 0 1px #fffffff5, inset 0 1px 2px #ffffffad,
+    inset 0 -1px 3px rgb(var(--glass-shadow-rgb) / .23),
+    0 5px 13px -6px rgb(var(--glass-shadow-rgb) / .4);
+}
+
+/* The tint belongs to the surface, rather than one shared blue shadow. */
+#home :is(.home-photo-card, .home-pdf-card, .home-library-link) {
+  --glass-shadow-rgb: var(--home-shadow-rgb);
+}
+.personal-card:nth-child(2n) .personal-open,
+.catalog-card:has(.catalog-thumbnail.tone-1) { --glass-shadow-rgb: 139 120 163; }
+.catalog-card:has(.catalog-thumbnail.tone-2) { --glass-shadow-rgb: 103 143 153; }
+.catalog-card:has(.catalog-thumbnail.tone-3) { --glass-shadow-rgb: 115 126 169; }
+.danger-button, .danger-solid, .outline, .toast-demo .bad {
+  --glass-shadow-rgb: 166 112 135;
+}
+.toast-demo .ok, .connection-check { --glass-shadow-rgb: 105 146 127; }
+.toast-demo .warn { --glass-shadow-rgb: 163 139 96; }
+
+#phone :is(
+  .card, .form-card, .mine-list, .sub-card, .list-card, .template-large,
+  .history-record, .catalog-card, .personal-open, .feedback-card, .support-channel,
+  .pdf-file-open, .auth-field, .pdf-edit-settings, .personal-dialog, .modal,
+  .device-connecting-dialog, .catalog-size-sheet, .pdf-size-sheet, .personal-popover
+) {
+  --glass-card-shadow:
+    inset 0 0 0 .85px #fffffff5, inset 0 1px 2px #ffffffad,
+    inset 0 -1px 3px rgb(var(--glass-shadow-rgb) / .14),
+    0 6px 14px -8px rgb(var(--glass-shadow-rgb) / .34),
+    0 15px 28px -21px rgb(var(--glass-shadow-rgb) / .3);
+  box-shadow: var(--glass-card-shadow) !important;
+}
+#phone :is(button, [role="button"]):is(
+  .card, .template-large, .history-record, .catalog-card, .personal-open,
+  .feedback-card, .support-channel, .pdf-file-open
+) { --button-shadow: var(--glass-card-shadow); }
+
+/* Grouped rows keep a continuous surface; selection must not deepen FAQ/language. */
+#phone :is(.mine-list button, .sub-row, .faq button) {
+  --button-shadow: inset 0 1px 0 #ffffffc7,
+    inset 0 -.5px 0 rgb(var(--glass-shadow-rgb) / .13);
+}
+
+#phone .bottom-nav {
+  --glass-shadow-rgb: 126 124 164;
+}
+@layer liquid-buttons {
+  #phone .bottom-nav {
+    box-shadow: inset 0 0 0 1px #fffffff0, inset 0 1px 2px #ffffff99,
+      inset 0 -1px 3px rgb(var(--glass-shadow-rgb) / .14),
+      0 13px 28px -10px rgb(var(--glass-shadow-rgb) / .31) !important;
+  }
+  #phone button:disabled, #phone [role="button"][aria-disabled="true"] {
+    color: var(--text-disabled) !important;
+  }
+  /* Preserve the white text needed by the dark camera view. */
+  #scan-print .scan-camera-footer button:disabled { color: #c2d3ee !important; }
+}
+
+#editor .editor-toolbar-row,
+#editor .text-property-tabs.editor-menu-selector {
+  box-shadow: inset 0 0 0 .85px #ffffffeb, inset 0 1px 2px #ffffff99,
+    inset 0 -1px 3px rgb(var(--glass-shadow-rgb) / .12),
+    0 5px 15px -9px rgb(var(--glass-shadow-rgb) / .34);
+}
+#editor :is(.text-property-tabs, .text-font-categories, .element-material-categories) > .editor-selector-thumb,
+.history-segment-thumb {
+  box-shadow: inset 0 0 0 .85px #fffffff5, inset 0 1px 2px #ffffffb3,
+    inset 0 -1px 2px rgb(var(--glass-shadow-rgb) / .2),
+    0 3px 9px -5px rgb(var(--glass-shadow-rgb) / .36);
+}
+#editor .editor-dock, .print-preview-dock, .device-sheet {
+  box-shadow: inset 0 1px 0 #fffffff5,
+    0 -10px 28px -18px rgb(var(--glass-shadow-rgb) / .33);
+}
+
+#home .section-head h2, #home .quick b {
+  background-image: linear-gradient(120deg, #20324c, #3b4e6c 44%, #3e3759 76%, #293e5b);
+}
+.home-carousel-slide[data-index='0'] { --glass-shadow-rgb: 136 134 174; }
+.home-carousel-slide[data-index='1'] { --glass-shadow-rgb: 113 145 160; }
+.home-carousel-slide[data-index='2'] { --glass-shadow-rgb: 128 128 169; }
+.home-carousel-card {
+  border-color: #ffffffed;
+  box-shadow: 0 8px 20px -14px rgb(var(--glass-shadow-rgb) / .32);
+}
