@@ -1,0 +1,386 @@
+[
+  {
+    "id": "icon-star",
+    "kind": "icon",
+    "name": "星星",
+    "category": "符号",
+    "tags": "星星 icon",
+    "url": "assets/materials/icon-star.svg"
+  },
+  {
+    "id": "icon-heart",
+    "kind": "icon",
+    "name": "爱心",
+    "category": "符号",
+    "tags": "爱心 icon",
+    "url": "assets/materials/icon-heart.svg"
+  },
+  {
+    "id": "icon-spark",
+    "kind": "icon",
+    "name": "闪光",
+    "category": "符号",
+    "tags": "闪光 icon",
+    "url": "assets/materials/icon-spark.svg"
+  },
+  {
+    "id": "icon-smile",
+    "kind": "icon",
+    "name": "笑脸",
+    "category": "生活",
+    "tags": "笑脸 icon",
+    "url": "assets/materials/icon-smile.svg"
+  },
+  {
+    "id": "icon-coffee",
+    "kind": "icon",
+    "name": "咖啡",
+    "category": "生活",
+    "tags": "咖啡 icon",
+    "url": "assets/materials/icon-coffee.svg"
+  },
+  {
+    "id": "icon-leaf",
+    "kind": "icon",
+    "name": "树叶",
+    "category": "自然",
+    "tags": "树叶 icon",
+    "url": "assets/materials/icon-leaf.svg"
+  },
+  {
+    "id": "icon-flower",
+    "kind": "icon",
+    "name": "花朵",
+    "category": "自然",
+    "tags": "花朵 icon",
+    "url": "assets/materials/icon-flower.svg"
+  },
+  {
+    "id": "icon-sun",
+    "kind": "icon",
+    "name": "太阳",
+    "category": "自然",
+    "tags": "太阳 icon",
+    "url": "assets/materials/icon-sun.svg"
+  },
+  {
+    "id": "icon-moon",
+    "kind": "icon",
+    "name": "月亮",
+    "category": "自然",
+    "tags": "月亮 icon",
+    "url": "assets/materials/icon-moon.svg"
+  },
+  {
+    "id": "icon-home",
+    "kind": "icon",
+    "name": "小屋",
+    "category": "生活",
+    "tags": "小屋 icon",
+    "url": "assets/materials/icon-home.svg"
+  },
+  {
+    "id": "icon-gift",
+    "kind": "icon",
+    "name": "礼物",
+    "category": "生活",
+    "tags": "礼物 icon",
+    "url": "assets/materials/icon-gift.svg"
+  },
+  {
+    "id": "icon-camera",
+    "kind": "icon",
+    "name": "相机",
+    "category": "生活",
+    "tags": "相机 icon",
+    "url": "assets/materials/icon-camera.svg"
+  },
+  {
+    "id": "icon-tag",
+    "kind": "icon",
+    "name": "标签",
+    "category": "办公",
+    "tags": "标签 icon",
+    "url": "assets/materials/icon-tag.svg"
+  },
+  {
+    "id": "icon-box",
+    "kind": "icon",
+    "name": "纸箱",
+    "category": "办公",
+    "tags": "纸箱 icon",
+    "url": "assets/materials/icon-box.svg"
+  },
+  {
+    "id": "icon-printer",
+    "kind": "icon",
+    "name": "打印机",
+    "category": "办公",
+    "tags": "打印机 icon",
+    "url": "assets/materials/icon-printer.svg"
+  },
+  {
+    "id": "icon-folder",
+    "kind": "icon",
+    "name": "文件夹",
+    "category": "办公",
+    "tags": "文件夹 icon",
+    "url": "assets/materials/icon-folder.svg"
+  },
+  {
+    "id": "icon-paper",
+    "kind": "icon",
+    "name": "文档",
+    "category": "办公",
+    "tags": "文档 icon",
+    "url": "assets/materials/icon-paper.svg"
+  },
+  {
+    "id": "icon-check",
+    "kind": "icon",
+    "name": "勾选",
+    "category": "符号",
+    "tags": "勾选 icon",
+    "url": "assets/materials/icon-check.svg"
+  },
+  {
+    "id": "icon-mail",
+    "kind": "icon",
+    "name": "邮件",
+    "category": "办公",
+    "tags": "邮件 icon",
+    "url": "assets/materials/icon-mail.svg"
+  },
+  {
+    "id": "icon-paw",
+    "kind": "icon",
+    "name": "爪印",
+    "category": "生活",
+    "tags": "爪印 icon",
+    "url": "assets/materials/icon-paw.svg"
+  },
+  {
+    "id": "icon-letter-w",
+    "kind": "icon",
+    "name": "字母 W",
+    "category": "字母",
+    "tags": "字母 W icon",
+    "url": "assets/materials/icon-letter-w.svg"
+  },
+  {
+    "id": "icon-letter-a",
+    "kind": "icon",
+    "name": "字母 A",
+    "category": "字母",
+    "tags": "字母 A icon",
+    "url": "assets/materials/icon-letter-a.svg"
+  },
+  {
+    "id": "icon-arrow",
+    "kind": "icon",
+    "name": "方向箭头",
+    "category": "符号",
+    "tags": "方向箭头 icon",
+    "url": "assets/materials/icon-arrow.svg"
+  },
+  {
+    "id": "icon-pin",
+    "kind": "icon",
+    "name": "位置",
+    "category": "生活",
+    "tags": "位置 icon",
+    "url": "assets/materials/icon-pin.svg"
+  },
+  {
+    "id": "border-1",
+    "kind": "border",
+    "name": "简约细框",
+    "category": "简约",
+    "tags": "简约细框 frame border",
+    "url": "assets/materials/border-1.svg"
+  },
+  {
+    "id": "border-2",
+    "kind": "border",
+    "name": "圆角边框",
+    "category": "简约",
+    "tags": "圆角边框 frame border",
+    "url": "assets/materials/border-2.svg"
+  },
+  {
+    "id": "border-3",
+    "kind": "border",
+    "name": "双线边框",
+    "category": "简约",
+    "tags": "双线边框 frame border",
+    "url": "assets/materials/border-3.svg"
+  },
+  {
+    "id": "border-4",
+    "kind": "border",
+    "name": "虚线边框",
+    "category": "简约",
+    "tags": "虚线边框 frame border",
+    "url": "assets/materials/border-4.svg"
+  },
+  {
+    "id": "border-5",
+    "kind": "border",
+    "name": "点线边框",
+    "category": "简约",
+    "tags": "点线边框 frame border",
+    "url": "assets/materials/border-5.svg"
+  },
+  {
+    "id": "border-6",
+    "kind": "border",
+    "name": "票券边框",
+    "category": "装饰",
+    "tags": "票券边框 frame border",
+    "url": "assets/materials/border-6.svg"
+  },
+  {
+    "id": "border-7",
+    "kind": "border",
+    "name": "四角边框",
+    "category": "装饰",
+    "tags": "四角边框 frame border",
+    "url": "assets/materials/border-7.svg"
+  },
+  {
+    "id": "border-8",
+    "kind": "border",
+    "name": "邮票边框",
+    "category": "装饰",
+    "tags": "邮票边框 frame border",
+    "url": "assets/materials/border-8.svg"
+  },
+  {
+    "id": "border-9",
+    "kind": "border",
+    "name": "椭圆边框",
+    "category": "装饰",
+    "tags": "椭圆边框 frame border",
+    "url": "assets/materials/border-9.svg"
+  },
+  {
+    "id": "border-10",
+    "kind": "border",
+    "name": "波浪边框",
+    "category": "装饰",
+    "tags": "波浪边框 frame border",
+    "url": "assets/materials/border-10.svg"
+  },
+  {
+    "id": "border-11",
+    "kind": "border",
+    "name": "装饰边框",
+    "category": "装饰",
+    "tags": "装饰边框 frame border",
+    "url": "assets/materials/border-11.svg"
+  },
+  {
+    "id": "border-12",
+    "kind": "border",
+    "name": "粗线边框",
+    "category": "装饰",
+    "tags": "粗线边框 frame border",
+    "url": "assets/materials/border-12.svg"
+  },
+  {
+    "id": "illustration-cat",
+    "kind": "illustration",
+    "name": "小猫",
+    "category": "动物",
+    "tags": "小猫 art illustration",
+    "url": "assets/materials/illustration-cat.svg"
+  },
+  {
+    "id": "illustration-rabbit",
+    "kind": "illustration",
+    "name": "小兔",
+    "category": "动物",
+    "tags": "小兔 art illustration",
+    "url": "assets/materials/illustration-rabbit.svg"
+  },
+  {
+    "id": "illustration-bird",
+    "kind": "illustration",
+    "name": "小鸟",
+    "category": "动物",
+    "tags": "小鸟 art illustration",
+    "url": "assets/materials/illustration-bird.svg"
+  },
+  {
+    "id": "illustration-plant",
+    "kind": "illustration",
+    "name": "绿植",
+    "category": "自然",
+    "tags": "绿植 art illustration",
+    "url": "assets/materials/illustration-plant.svg"
+  },
+  {
+    "id": "illustration-bouquet",
+    "kind": "illustration",
+    "name": "花束",
+    "category": "自然",
+    "tags": "花束 art illustration",
+    "url": "assets/materials/illustration-bouquet.svg"
+  },
+  {
+    "id": "illustration-mountain",
+    "kind": "illustration",
+    "name": "山野",
+    "category": "自然",
+    "tags": "山野 art illustration",
+    "url": "assets/materials/illustration-mountain.svg"
+  },
+  {
+    "id": "illustration-coffee",
+    "kind": "illustration",
+    "name": "咖啡时光",
+    "category": "生活",
+    "tags": "咖啡时光 art illustration",
+    "url": "assets/materials/illustration-coffee.svg"
+  },
+  {
+    "id": "illustration-bread",
+    "kind": "illustration",
+    "name": "面包",
+    "category": "生活",
+    "tags": "面包 art illustration",
+    "url": "assets/materials/illustration-bread.svg"
+  },
+  {
+    "id": "illustration-house",
+    "kind": "illustration",
+    "name": "温暖小屋",
+    "category": "生活",
+    "tags": "温暖小屋 art illustration",
+    "url": "assets/materials/illustration-house.svg"
+  },
+  {
+    "id": "illustration-balloon",
+    "kind": "illustration",
+    "name": "气球",
+    "category": "节日",
+    "tags": "气球 art illustration",
+    "url": "assets/materials/illustration-balloon.svg"
+  },
+  {
+    "id": "illustration-present",
+    "kind": "illustration",
+    "name": "礼物盒",
+    "category": "节日",
+    "tags": "礼物盒 art illustration",
+    "url": "assets/materials/illustration-present.svg"
+  },
+  {
+    "id": "illustration-sparkles",
+    "kind": "illustration",
+    "name": "星光",
+    "category": "节日",
+    "tags": "星光 art illustration",
+    "url": "assets/materials/illustration-sparkles.svg"
+  }
+]

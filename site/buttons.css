@@ -1,0 +1,245 @@
+/* Shared button materials. Layered important rules supersede the older page
+   overrides, so dynamically generated buttons receive the same materials. */
+@layer liquid-buttons {
+  :root {
+    --liquid-clear:
+      radial-gradient(ellipse at 14% 0%, #ffffffa6, transparent 67%),
+      linear-gradient(130deg, #ffffff94, #e5edfa59 55%, #e8e4f55e);
+    --liquid-primary:
+      radial-gradient(ellipse at 15% 0%, #ffffffa1, transparent 65%),
+      radial-gradient(ellipse at 100% 100%, #bcbdf461, transparent 65%),
+      linear-gradient(115deg, #cddff9c2, #dde6f8bd 48%, #e3daf0b0);
+    --liquid-selected:
+      radial-gradient(ellipse at 20% 0%, #ffffffb3, transparent 66%),
+      linear-gradient(135deg, #e4efffc2, #ccdaf994 55%, #d9d8f59c);
+    --liquid-muted:
+      radial-gradient(ellipse at 14% 0%, #ffffff66, transparent 67%),
+      linear-gradient(130deg, #eef1f7a6, #e0e6f185 55%, #e9eaf399);
+    --liquid-shadow:
+      inset 0 0 0 1px #ffffffbd, inset 0 1px 1px #ffffff59,
+      inset 0 -1px 2px #94a8c724, 0 4px 10px -5px #647da147;
+    --liquid-selected-shadow:
+      inset 0 0 0 1px #ffffffdb, inset 0 1px 1px #ffffff70,
+      inset 0 -1px 3px #8ba5db30, 0 4px 10px -5px #647da157;
+  }
+
+  button,
+  [role="button"],
+  .template-large,
+  .print-setting .row:first-child {
+    background: var(--button-fill, var(--liquid-clear)) !important;
+    border-color: transparent !important;
+    border-radius: var(--button-radius, 14px) !important;
+    box-shadow: var(--button-shadow, var(--liquid-shadow)) !important;
+    backdrop-filter: blur(24px) saturate(145%) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(145%) !important;
+    transition: box-shadow .18s ease, filter .18s ease, color .18s ease;
+  }
+
+  /* Primary controls share the same liquid gradient as the Create button. */
+  .primary, .print-btn, .create-label, .side button.active {
+    --button-fill: var(--liquid-primary);
+    --button-shadow: var(--liquid-selected-shadow);
+    --button-radius: 17px;
+    color: #526a9b !important;
+  }
+  .create-label { --button-radius: 19px; }
+  .side button { --button-radius: 10px; }
+  .side button.active { --button-radius: 10px; }
+  .secondary { --button-radius: 16px; }
+
+  /* Selection uses a subtle tint instead of stacking opaque white strokes. */
+  .chip.active, .folder.active,
+  .history-tabs button.active, .help-categories button.active,
+  .nav-item.active, button[aria-checked="true"],
+  button[aria-pressed="true"], button[aria-expanded="true"] {
+    --button-fill: var(--liquid-selected);
+    --button-shadow: var(--liquid-selected-shadow);
+    color: #6079b1 !important;
+  }
+  .chip { --button-radius: 15px; }
+  .folder { --button-radius: 999px; }
+  .help-categories button { --button-radius: 12px; }
+  .history-tabs button { --button-radius: 13px; }
+
+  /* Keep the original home card layout and its quiet colour variations. */
+  .quick { --button-radius: 21px; }
+  .quick:first-child {
+    --button-fill:
+      radial-gradient(ellipse at 8% 0%, #ffffffa6, transparent 66%),
+      linear-gradient(135deg, #dfe9fbc7, #edf3fca1 58%, #dfe7f58a);
+  }
+  .quick:nth-child(2) {
+    --button-fill:
+      radial-gradient(ellipse at 8% 0%, #ffffffa6, transparent 66%),
+      linear-gradient(135deg, #e8e2f6b0, #f5f1fba1 58%, #e6e3f38a);
+  }
+  .quick:nth-child(3) {
+    --button-fill:
+      radial-gradient(ellipse at 8% 0%, #ffffffa6, transparent 66%),
+      linear-gradient(135deg, #dfeef5bf, #eff7f9a1 58%, #e1ebf08a);
+  }
+  .template { --button-radius: 20px; }
+  .template-large, .feedback-card { --button-radius: 22px; }
+  .history-record, .list-card, .help-support { --button-radius: 21px; }
+
+  /* Small navigation, password visibility and editor tools use clear glass. */
+  .back, .mine-settings { --button-radius: 50%; }
+  .top-action { --button-radius: 13px; }
+  .eye, .toolstrip button { --button-radius: 10px; }
+  .float-tools button { --button-radius: 50%; }
+  .element-grid button { --button-radius: 14px; }
+  .toolstrip button { min-width: 28px; min-height: 28px; }
+  .code-send { --button-radius: 18px; }
+  .link, .banner-link, .feedback-help-link,
+  .scan-options button, .auth-password-tools button, .auth-bottom button {
+    --button-radius: 999px;
+    --button-fill:
+      radial-gradient(ellipse at 15% 0%, #ffffff73, transparent 70%),
+      linear-gradient(135deg, #ffffff61, #e6edfb45 60%, #e8e3f24d);
+    --button-shadow: inset 0 0 0 1px #ffffff9e, inset 0 1px 0 #ffffff4d;
+    min-height: 26px;
+  }
+  .device-pill { --button-radius: 999px; }
+  .auth-agreement a {
+    background: linear-gradient(130deg, #ffffff85, #dce7fa42, #e4e0f44d) !important;
+    border-radius: 5px;
+    box-shadow: inset 0 .5px 0 #ffffff40;
+  }
+
+  /* A continuous, shallow material keeps grouped lists from becoming cards. */
+  .mine-list button, .sub-row, .faq button {
+    --button-radius: 0;
+    --button-fill:
+      radial-gradient(ellipse at 5% 0%, #ffffff66, transparent 75%),
+      linear-gradient(125deg, #ffffff35, #e6edf721 65%, #ece9f82b);
+    --button-shadow: inset 0 1px 0 #ffffff85, inset 0 -.5px 0 #cad6ea1a;
+  }
+  /* These rows retain their resting material when checked or expanded. */
+  #language .choice-row, #help .faq button {
+    --button-fill:
+      radial-gradient(ellipse at 5% 0%, #ffffff66, transparent 75%),
+      linear-gradient(125deg, #ffffff35, #e6edf721 65%, #ece9f82b);
+    --button-shadow: inset 0 1px 0 #ffffff85, inset 0 -.5px 0 #cad6ea1a;
+  }
+  #language .choice-row { color: #535f7b !important; }
+  #help .faq button { color: #63708d !important; }
+  #history .history-tabs button {
+    background:transparent !important;border:0 !important;box-shadow:none !important;
+    backdrop-filter:none !important;-webkit-backdrop-filter:none !important;
+    color:#91a0b9 !important;--button-radius:12px;
+  }
+  #history .history-tabs button.active { color:#687fa7 !important; }
+  .support-channel { --button-radius: 22px; }
+  .mine-header {
+    --button-radius: 28px;
+    --button-fill:
+      radial-gradient(ellipse at 5% 0%, #ffffff33, transparent 72%),
+      linear-gradient(125deg, #ffffff0a, #e9eefa0f);
+    --button-shadow: inset 0 1px 0 #ffffff59;
+    border-color: transparent !important;
+  }
+  .print-setting .row:first-child { --button-radius: 12px; }
+
+  /* Semantic colours are also translucent gradients, never flat fills. */
+  .danger-button, .danger-solid, .outline, .toast-demo .bad {
+    --button-fill:
+      radial-gradient(ellipse at 15% 0%, #ffffffa1, transparent 67%),
+      linear-gradient(125deg, #fae7edc9, #f4dce5a1 58%, #eee2f3a6);
+    color: #ad6a7d !important;
+  }
+  .danger-button { --button-radius: 16px; }
+  .danger-solid { --button-radius: 13px; }
+  .toast-demo button { --button-radius: 999px; }
+  .toast-demo .ok {
+    --button-fill:
+      radial-gradient(ellipse at 15% 0%, #ffffffa1, transparent 67%),
+      linear-gradient(125deg, #e0f0e9d1, #d3e9e0a1 58%, #e0eaf2a6);
+    color: #6c9583 !important;
+  }
+  .toast-demo .warn {
+    --button-fill:
+      radial-gradient(ellipse at 15% 0%, #ffffffa1, transparent 67%),
+      linear-gradient(125deg, #f7ecd7d1, #efe2c7a1 58%, #ede4e6a6);
+    color: #a28a5f !important;
+  }
+
+  button:disabled, [role="button"][aria-disabled="true"] {
+    --button-fill: var(--liquid-muted);
+    --button-shadow: inset 0 0 0 1px #ffffff80;
+    color: #9ba7be !important;
+    cursor: not-allowed;
+    filter: saturate(.65);
+  }
+  @media (hover: hover) {
+    button:not(:disabled):hover, [role="button"]:not([aria-disabled="true"]):hover {
+      box-shadow: var(--button-shadow, var(--liquid-shadow)), 0 4px 12px -7px #7e9ac547 !important;
+    }
+  }
+  button:not(:disabled):active, [role="button"]:not([aria-disabled="true"]):active {
+    filter: brightness(.975) saturate(1.08);
+    box-shadow: inset 0 1px 5px #8da5d12e, inset 0 0 0 1px #ffffffbd !important;
+  }
+  /* Remove the old extra highlight pseudo-elements and soften shared shells. */
+  #new .chip.active::after, #new .create-label::before { display: none !important; }
+  .bottom-nav {
+    border-color: transparent !important;
+    box-shadow: inset 0 0 0 1px #ffffffc4, inset 0 1px 1px #ffffff59,
+      0 13px 28px -10px #59669c30 !important;
+  }
+  .shape-options, .history-tabs { border-color: #ffffff66 !important; }
+  /* The shell stays continuous; only the current Tab has a glass highlight. */
+  .bottom-nav .nav-item,
+  .bottom-nav .nav-item.active,
+  .bottom-nav .nav-item:not(:disabled):hover,
+  .bottom-nav .nav-item:not(:disabled):active {
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    filter: none !important;
+  }
+  .bottom-nav .nav-item { color: #9098ac !important; }
+  .bottom-nav .nav-item.active,
+  .bottom-nav .nav-item.active:not(:disabled):is(:hover, :active) {
+    color: #5d6db7 !important;
+    border-radius: 27px !important;
+    background:
+      radial-gradient(ellipse at 20% 0%, #ffffff85, transparent 70%),
+      linear-gradient(135deg, #ffffff66, #d6e3fa61 58%, #dfddf466) !important;
+    box-shadow: inset 0 0 0 1px #ffffffad,
+      inset 0 1px 1px #ffffff59, 0 2px 6px -4px #8297bd4d !important;
+  }
+  button:focus-visible, [role="button"]:focus-visible {
+    outline: 2px solid #91a8d6;
+    outline-offset: 3px;
+  }
+  .catalog-card { --button-radius: 21px; }
+  .catalog-category, .catalog-keyword { --button-radius: 999px; }
+  .catalog-category[aria-selected="true"] {
+    --button-fill: var(--liquid-selected);
+    --button-shadow: var(--liquid-selected-shadow);
+    color: #6079b1 !important;
+  }
+  .catalog-search-trigger {
+    --button-radius: 18px;
+    --button-fill: linear-gradient(115deg, #ffffff80, #e8eef773);
+    --button-shadow: none;
+    border: .75px solid #ffffff70 !important;
+    backdrop-filter: blur(16px) saturate(120%) !important;
+    -webkit-backdrop-filter: blur(16px) saturate(120%) !important;
+    color: #8e9bb3 !important;
+    font-weight: 400;
+  }
+  .catalog-search-trigger:not(:disabled):is(:hover, :active) {
+    box-shadow: var(--button-shadow) !important;
+    filter: none !important;
+  }
+  .catalog-search-submit { --button-radius: 13px; }
+  .catalog-size-option { --button-radius: 15px; }
+  @media (prefers-reduced-motion: reduce) {
+    button, [role="button"] { transition: none !important; }
+  }
+}

@@ -1,0 +1,16 @@
+/* Press lighting complements each control's existing liquid material. */
+@layer liquid-buttons {
+ #phone .glass-pressed {
+  filter:brightness(1.055) saturate(1.1)!important;
+  will-change:scale,filter;
+ }
+ #phone .glass-pressed:not(.nav-item):not([role="tab"]):not(.text-switch) {
+  box-shadow:var(--button-shadow,var(--liquid-shadow)),inset 0 1px 3px #ffffffa6,0 5px 17px -8px #8198bf55!important;
+ }
+ #phone .glass-settling {will-change:scale}
+ /* Replace the older shrinking Create effect with the shared outward press. */
+ #new .create-label:active {transform:none!important}
+ @media(prefers-reduced-motion:reduce){
+  #phone .glass-pressed,#phone .glass-settling {scale:none!important;will-change:auto;filter:none!important}
+ }
+}

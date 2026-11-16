@@ -1,0 +1,16 @@
+/* Continuously stretching capsule for editor menu pagination. */
+.page-indicator { isolation:isolate;overflow:hidden;gap:0; }
+.home-carousel-dots.page-indicator { height:22px; }
+#editor .editor-menu-dots.page-indicator { position:relative;width:max-content;margin:0 auto;height:23px; }
+.home-carousel-dots.page-indicator > button,
+#editor .editor-menu-dots.page-indicator > button { position:relative;flex:0 0 16px;width:16px;height:22px;padding:0; }
+.home-carousel-dots.page-indicator > button::before,
+#editor .editor-menu-dots.page-indicator > button::after { width:4px;height:4px;border-radius:50%;background:#acb9ce9c;transition:none; }
+.page-indicator-worm {
+ position:absolute;left:0;top:50%;z-index:1;height:4px;border-radius:999px;pointer-events:none;
+ background:linear-gradient(105deg,#7c97bd,#9690b8);transform-origin:left center;
+}
+@layer liquid-buttons {
+ .home-carousel-dots.page-indicator > button,
+ #editor .editor-menu-dots.page-indicator > button { --button-fill:transparent;--button-shadow:none;backdrop-filter:none !important;-webkit-backdrop-filter:none !important; }
+}

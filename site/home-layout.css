@@ -1,0 +1,71 @@
+/* V1.0.0: slightly stronger shadows retain each shortcut's glass tint. */
+#home .home-opening { position:relative;display:flow-root; }
+#home .home-top { min-height:64px;margin-bottom:12px;padding-top:12px;padding-bottom:12px;isolation:isolate; }
+#home .home-top .device-pill { position:relative;inset:auto;z-index:1;max-width:62%;min-height:35px;padding:8px 12px;font-size:11px;gap:6px; }
+#home #deviceStatus { overflow:hidden;text-overflow:ellipsis; }
+#home .home-top .device-pill > svg { width:11px;height:11px;transform:rotate(90deg);color:#96a5be; }
+#home .home-ambient { position:absolute;right:-22px;top:-76px;bottom:82px;width:300px;max-width:85%;overflow:hidden;pointer-events:none;z-index:0;mask-image:radial-gradient(ellipse at 53% 45%,#000 30%,transparent 76%);-webkit-mask-image:radial-gradient(ellipse at 53% 45%,#000 30%,transparent 76%); }
+#home .home-ambient svg { display:block;width:100%;height:100%; }
+#home .home-aurora-flow { transform-box:fill-box;transform-origin:center;animation:home-aurora-wave 10s ease-in-out infinite alternate; }
+#home .home-aurora-flow-back { animation-name:home-aurora-wave-back;animation-duration:13s;animation-delay:-4s; }
+#home .home-aurora-color-1 { animation:home-aurora-color-one 14s ease-in-out infinite; }
+#home .home-aurora-color-2 { animation:home-aurora-color-two 14s ease-in-out infinite; }
+#home .home-aurora-color-3 { animation:home-aurora-color-three 14s ease-in-out infinite; }
+#home .home-ambient :is(g,stop) { animation-play-state:paused; }
+#home.active .home-ambient :is(g,stop) { animation-play-state:running; }
+#home[inert] .home-ambient :is(g,stop) { animation-play-state:paused; }
+#home :is(.home-photo-card,.home-pdf-card,.home-library-link) {
+  --home-card-shadow:inset 0 0 0 .85px #fffffff0,inset 0 1px 3px #ffffffad,
+    inset 0 -1px 2px rgb(var(--home-shadow-rgb) / .1),0 0 12px 1px #ffffff66,
+    0 5px 12px -7px rgb(var(--home-shadow-rgb) / .25),0 13px 24px -18px rgb(var(--home-shadow-rgb) / .28);
+}
+#home .home-workbench { position:relative;z-index:1;margin-bottom:0; }
+#home .home-workbench .section-head { margin:4px 0 13px !important; }
+#home .quick-grid { grid-template-columns:minmax(0,1.25fr) minmax(0,1fr) !important;grid-template-rows:112px !important;gap:12px !important; }
+#home .quick-grid .home-print-card {
+  grid-area:auto !important;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;
+  height:112px;min-width:0;padding:16px 17px !important;gap:0;border:.75px solid #ffffffc7 !important;
+  background:var(--button-fill) !important;box-shadow:var(--button-shadow) !important;
+}
+#home .home-print-card::after { content:none !important; }
+#home .home-print-card .ico {
+  position:absolute;left:14px;top:11px;right:auto;width:56px;height:45px;
+  border:0;background:none;box-shadow:none;transform:none;justify-content:center;
+}
+#home .home-print-card .ico img { display:block;width:56px;height:45px;pointer-events:none; }
+#home .home-pdf-card .ico { left:13px;width:40px; }
+#home .home-pdf-card .ico img { width:40px; }
+#home .home-print-copy { display:block; }
+#home .home-print-copy b { font-size:14px !important;font-weight:600 !important;letter-spacing:-.3px; }
+#home .home-library-shortcuts {
+  display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:12px;margin-top:12px;
+}
+#home .home-library-link { min-width:0;display:flex;align-items:center;gap:10px;height:76px;padding:0 17px;color:#7288a7;font-size:12px;font-weight:500; }
+#home .home-library-art { display:block;flex:0 0 40px;width:40px;height:40px;object-fit:contain;pointer-events:none;user-select:none; }
+#home .home-library-link > span { white-space:nowrap; }
+#home .home-photo-card { --home-shadow-rgb:134 158 202; }
+#home .home-pdf-card { --home-shadow-rgb:133 171 185; }
+#home .home-library-link[data-home-action='templates'] { --home-shadow-rgb:145 163 195; }
+#home .home-library-link[data-home-action='favorites'] { --home-shadow-rgb:162 150 194; }
+#home .home-banner.home-carousel { margin-bottom:22px; }
+@layer liquid-buttons {
+  #home .home-photo-card { --button-radius:23px;--button-fill:radial-gradient(ellipse at 0% 0%,#ffffff99,transparent 72%),linear-gradient(130deg,#dce9f8a6,#e4ecf875,#e8e7f583);--button-shadow:inset 0 1px 1px #ffffffd9,0 8px 18px -14px #718bb94d; }
+  #home .home-pdf-card { --button-radius:23px;--button-fill:radial-gradient(ellipse at 0% 0%,#ffffff99,transparent 72%),linear-gradient(130deg,#dfedf4a6,#e6f0f375,#e5eaf583);--button-shadow:inset 0 1px 1px #ffffffd9,0 8px 18px -14px #718bb94d; }
+  #home .home-library-link { --button-radius:21px;--button-fill:linear-gradient(125deg,#ffffff73,#e2ecf54d,#e9e5f54d);--button-shadow:inset 0 0 0 .75px #ffffffb3,inset 0 1px 1px #ffffff59; }
+  #home .home-library-link:last-child { --button-fill:linear-gradient(125deg,#ffffff73,#e9e6f54d,#e4eaf54d); }
+  #home :is(.home-photo-card,.home-pdf-card,.home-library-link) { --button-shadow:var(--home-card-shadow); }
+}
+@keyframes home-aurora-wave { from { transform:translate3d(-5px,12px,0) skewX(-4deg) scale(.94,1.03); } to { transform:translate3d(5px,-13px,0) skewX(5deg) scale(1.05,1.12); } }
+@keyframes home-aurora-wave-back { from { transform:translate3d(5px,9px,0) skewX(4deg) scale(1.06,1); } to { transform:translate3d(-6px,-16px,0) skewX(-5deg) scale(.95,1.13); } }
+@keyframes home-aurora-color-one { 0%,100% { stop-color:#b6cfe9; } 33% { stop-color:#c3dfd7; } 66% { stop-color:#d2c5e8; } }
+@keyframes home-aurora-color-two { 0%,100% { stop-color:#b6dcd4; } 33% { stop-color:#d0c5e7; } 66% { stop-color:#bfd6ec; } }
+@keyframes home-aurora-color-three { 0%,100% { stop-color:#d2c4e9; } 33% { stop-color:#c1d7ed; } 66% { stop-color:#c4e0d8; } }
+@media(prefers-reduced-motion:reduce) { #home .home-ambient :is(g,stop) { animation:none !important; } }
+@media(max-width:350px) {
+  #home .quick-grid { gap:10px !important; }
+  #home .quick-grid .home-print-card { padding:14px !important; }
+  #home .home-print-copy b { font-size:13px !important; }
+  #home .home-library-link { gap:8px;padding:0 12px;font-size:11px; }
+  #home .home-library-art { flex-basis:36px;width:36px;height:36px; }
+  #home .home-library-shortcuts { gap:10px; }
+}
