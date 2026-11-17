@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 58" fill="none">
  <defs>
-  <linearGradient id="folder" x1="8" y1="21" x2="56" y2="50" gradientUnits="userSpaceOnUse"><stop stop-color="#bad0eb"/><stop offset="1" stop-color="#9fafd2"/></linearGradient>
-  <linearGradient id="paper" x1="19" y1="7" x2="47" y2="40" gradientUnits="userSpaceOnUse"><stop stop-color="#fff" stop-opacity=".97"/><stop offset="1" stop-color="#dbe6f5" stop-opacity=".9"/></linearGradient>
-  <linearGradient id="front" x1="7" y1="30" x2="57" y2="51" gradientUnits="userSpaceOnUse"><stop stop-color="#e4eefb"/><stop offset="1" stop-color="#c0cfe9"/></linearGradient>
+  <linearGradient id="folder" x1="8" y1="21" x2="56" y2="50" gradientUnits="userSpaceOnUse"><stop stop-color="#a8c8f1"/><stop offset="1" stop-color="#8ea5d6"/></linearGradient>
+  <linearGradient id="paper" x1="19" y1="7" x2="47" y2="40" gradientUnits="userSpaceOnUse"><stop stop-color="#fff" stop-opacity=".97"/><stop offset="1" stop-color="#ccdef7" stop-opacity=".9"/></linearGradient>
+  <linearGradient id="front" x1="7" y1="30" x2="57" y2="51" gradientUnits="userSpaceOnUse"><stop stop-color="#d7e7fb"/><stop offset="1" stop-color="#afc6ed"/></linearGradient>
  </defs>
  <path d="M7 22v-3a5 5 0 0 1 5-5h12l5 6h22a5 5 0 0 1 5 5v22a5 5 0 0 1-5 5H12a5 5 0 0 1-5-5Z" fill="url(#folder)" stroke="#fff" stroke-opacity=".7" stroke-width=".8"/>
  <rect x="18" y="7" width="29" height="35" rx="5" transform="rotate(8 18 7)" fill="url(#paper)" stroke="#fff" stroke-width=".8"/>

@@ -77,6 +77,21 @@ document.querySelector('#home .content').innerHTML=`
  <div class="section-head"><h2>推荐模板</h2><button class="link home-more" onclick="go('all-templates')">更多模板 ${svg('arrow')}</button></div>
  <div class="template-row">${templates.map(templateMarkup).join('')}</div>`;
 
+// Generate the aurora only when entering Home. No animation loop or timer is needed.
+function randomizeHomeAurora(){
+ const ambient=document.querySelector('#home .home-ambient');if(!ambient)return;
+ const number=(min,max)=>Math.round(min+Math.random()*(max-min));
+ ambient.querySelectorAll('path').forEach((path,index)=>{
+  const x=68+index*30+number(-12,12),bend=number(16,39);
+  path.setAttribute('d',`M${x} 148 C${x+bend} 112 ${x-bend} 88 ${x+number(-9,18)} 56 S${x+bend} 10 ${x+number(-8,22)} -28`);
+  path.setAttribute('stroke-width',number(index%2?28:20,index%2?40:29));
+ });
+ const palettes=[['#91b9f3','#81cabc','#b8a2e5'],['#8aaceb','#a99ce2','#8ccbc9'],['#91c7da','#91afe9','#baa6e9']];
+ const colors=palettes[number(0,palettes.length-1)];
+ ambient.querySelectorAll('stop').forEach((stop,index)=>stop.setAttribute('stop-color',colors[index]));
+}
+randomizeHomeAurora();
+
 function topbar(title,back='home'){return `<div class="topbar"><button class="back" onclick="go('${back}')">${svg('back')}</button><h1>${title}</h1><span class="spacer"></span></div>`}
 function field(id,placeholder,type='text',icon='mail',autocomplete='off'){return `<label class="auth-field">${svg(icon)}<input id="${id}" name="${id}" type="${type}" placeholder="${placeholder}" aria-label="${placeholder}" autocomplete="${autocomplete}">${type==='password'?`<button class="eye" type="button" onclick="togglePassword('${id}')" aria-label="显示或隐藏密码">${svg('eye')}</button>`:''}</label>`}
 function authPage(kind){
@@ -114,7 +129,7 @@ const mineButtons=document.querySelectorAll('#mine .mine-list button');
 mineButtons[3].onclick=()=>showModal('success','连接与打印帮助','开启打印机并靠近手机，在首页点击设备入口重新扫描。');
 mineButtons[4].onclick=()=>showModal('success','联系我们','ESPrint 官方客服邮箱及联系方式待提供。');
 mineButtons[5].onclick=()=>showModal('success','当前为原型预览','正式版本与更新地址将在发布前配置。');
-mineButtons[6].onclick=()=>showModal('success','ESPrint','标签创作与热敏打印\nLiquid Glass · V1.0.1');
+mineButtons[6].onclick=()=>showModal('success','ESPrint','标签创作与热敏打印\nLiquid Glass · V1.0.2');
 mineButtons[1].onclick=()=>showModal('success','切换语言','中文、英语、西班牙语、葡萄牙语、日语、法语、德语。');
 mineButtons[2].onclick=()=>confirm('切换为 inch？','1 inch = 25.4 mm，实际纸张尺寸不会改变。',()=>{mineButtons[2].lastElementChild.textContent='inch　›';toast('success','单位已切换为 inch')});
 
@@ -133,13 +148,14 @@ pages.splice(0,pages.length,...[
  ['login','邮箱登录'],['register','邮箱注册'],['forgot','忘记密码'],['device','设备扫描'],['device-connecting','正在连接'],['device-connect','连接成功'],['device-detail','设备详情'],['device-timeout','扫描无结果'],['device-failed','连接失败'],['feedback','统一反馈组件']
 ]);
 links.innerHTML=pages.map(([id,name])=>`<button data-page="${id}" onclick="go('${id}')">${name}</button>`).join('');
-document.querySelector('.side h2').textContent='ESPrint · V1.0.1';
+document.querySelector('.side h2').textContent='ESPrint · V1.0.2';
 document.querySelector('.side>p').textContent='普通三项底栏、错落的快捷入口与两列瀑布流。点击下方页面名，或直接操作手机内的入口体验完整路径。';
 links.insertAdjacentHTML('afterend','<p>交互原型：邮箱、验证码、设备与打印均为演示数据，不连接真实账号或硬件。</p>');
 
 go=function(id,options={}){
  const target=document.getElementById(id);if(!target||!target.classList.contains('screen'))return;
  const current=document.querySelector('.screen.active');
+ if(id==='home'&&(!current||current.id!=='home'))randomizeHomeAurora();
  if(current&&current.id==='device-connecting'&&id!=='device-connect')actionToken++;
  closeModal();document.querySelectorAll('.screen').forEach(el=>el.classList.remove('active','with-tabs','no-tabs'));
  target.classList.add('active',['home','mine'].includes(id)?'with-tabs':'no-tabs');target.scrollTop=0;

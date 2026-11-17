@@ -1,0 +1,76 @@
+/* V1.0.2: readable controls and a richer blue / teal / violet glass palette.
+   Color belongs to UI surfaces; imported images and printable artwork are untouched. */
+.phone {
+  background: radial-gradient(ellipse at 105% 18%, #c9c5f38c, transparent 56%),
+    radial-gradient(ellipse at 0% 66%, #bbdcf34d, transparent 65%),
+    linear-gradient(#f5f8ff, #eaf0fc) !important;
+}
+.phone[data-page="mine"] {
+  background: radial-gradient(ellipse 95% 38% at 3% 0%, #9fc4fbb3, transparent 80%),
+    radial-gradient(ellipse 85% 33% at 100% 10%, #bda2ecad, transparent 78%),
+    radial-gradient(ellipse 95% 32% at 65% 26%, #b2ddd45c, transparent 85%),
+    linear-gradient(#f2f7ff, #edf2fc 65%, #eaf0fb) !important;
+}
+.phone[data-page="new"] {
+  background: radial-gradient(ellipse 100% 40% at 100% 13%, #bca9f38c, transparent 75%),
+    radial-gradient(ellipse 100% 35% at 0% 65%, #acd2f578, transparent 78%),
+    linear-gradient(#f5f8ff, #edf2fc) !important;
+}
+#mine .mine-list button { font-size: 16px; }
+#mine .mine-list button > :last-child { font-size: 13px; }
+#mine #accountHint { font-size: 14px; }
+#mine .mine-list button { min-height: 60px; }
+#mine .mine-group-0 button { min-height: 64px; }
+#mine .mine-group-2 button { min-height: 58px; }
+#mine .mine-list {
+  background: linear-gradient(140deg, #ffffff85, #d6e1fa54 58%, #ddd5f44a) !important;
+}
+.mine-row-icon { width: 33px; height: 33px; }
+.mine-row-icon svg { width: 18px; height: 18px; }
+.mine-row-icon.icon-0 { background: #c4cef4a6; }
+.mine-row-icon.icon-1, .mine-row-icon.icon-4 { background: #bcd9f5a3; }
+.mine-row-icon.icon-2, .mine-row-icon.icon-6 { background: #d0bcefa3; }
+.mine-row-icon.icon-3, .mine-row-icon.icon-5 { background: #b8dfd3a3; }
+.sub-row, .faq button { font-size: 15px; }
+.choice-native { font-size: 16px; }
+.choice-description, .sub-row small { font-size: 12px; }
+.sub-row .value { font-size: 13px; }
+.subnote, .faq-answer { font-size: 13px; }
+.sub-card {
+  background: linear-gradient(135deg, #ffffffb3, #d3e1f861 60%, #ddd3f359);
+}
+.phone .auth-field input, .phone .personal-name-field input,
+.phone .catalog-search-input input { font-size: 16px; }
+.phone .auth-agreement { font-size: 12px; }
+.phone .auth-bottom, .phone .auth-bottom button { font-size: 14px; }
+.phone .primary, .phone .secondary { font-size: 15px; }
+#phone .bottom-nav .nav-item { font-size: 12px !important; }
+#home .home-library-link { font-size: 14px; }
+#home .home-print-copy b { font-size: 16px !important; }
+#editor .element-grid button { font-size: 14px; }
+#editor .text-property-tabs > button { font-size: 14px; }
+#editor :is(.text-font-categories, .element-material-categories) > button { font-size: 12px; }
+#editor .text-layout-modes { width: 194px; }
+#editor .text-layout-modes > button { font-size: 12px; }
+#editor .editor-dock {
+  background: linear-gradient(125deg, #ffffff42, #bed4f552 52%, #ccbeec52);
+}
+#editor .editor-selector-thumb,
+#editor :is(.text-property-tabs, .text-font-categories, .element-material-categories) > .editor-selector-thumb,
+.history-segment-thumb {
+  background: radial-gradient(ellipse at 20% 0%, #ffffff9c, transparent 72%),
+    linear-gradient(115deg, #edf5ffa6, #b8d0f599, #cdbced99);
+}
+@layer liquid-buttons {
+  #phone .bottom-nav .nav-item.active,
+  #phone .bottom-nav .nav-item.active:not(:disabled):is(:hover, :active) {
+    background: radial-gradient(ellipse at 20% 0%, #ffffff85, transparent 70%),
+      linear-gradient(135deg, #edf4ff85, #bcd1f77d 58%, #cdc5ee80) !important;
+  }
+}
+@media (max-width: 350px) {
+  #mine .content { padding-left: 18px !important; padding-right: 18px !important; }
+  #mine .mine-list button { padding: 0 13px; }
+  #home .home-library-link { gap: 7px; padding: 0 11px; font-size: 13px; }
+  #home .home-print-copy b { font-size: 15px !important; }
+}

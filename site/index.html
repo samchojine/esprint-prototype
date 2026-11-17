@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>ESPrint · V1.0.1</title>
-  <link rel="stylesheet" href="glass.css?v=1.0.1">
+  <title>ESPrint · V1.0.2</title>
+  <link rel="stylesheet" href="glass.css?v=1.0.2">
   <style>
     :root{--green:#12b886;--green-2:#e8faf2;--ink:#1c2c28;--muted:#7d8c87;--bg:#f5f8f7;--line:#e7eeea;--red:#df5252;--amber:#d99725;--shadow:0 16px 34px rgba(31,61,52,.10)}
     *{box-sizing:border-box} body{margin:0;background:#dbe7e3;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","PingFang SC","Microsoft YaHei",sans-serif}
@@ -26,26 +26,27 @@
     .side{width:290px;color:#273d37}.side h2{font-size:17px;margin:4px 0 10px}.side p{font-size:12px;color:#44534e;line-height:1.6}.side .panel{background:rgba(255,255,255,.78);border-radius:18px;padding:16px;margin-top:14px}.side button{display:block;width:100%;text-align:left;background:#fff;border-radius:10px;padding:10px 12px;margin:6px 0;color:#2d483f}.side button.active{background:var(--green);color:#fff}.url{background:#1e2d28;color:#4cba8c;border-radius:10px;padding:10px;font-size:11px;word-break:break-all;margin-top:12px}
     @media(max-width:760px){.app{padding:0}.workspace{display:block}.side{display:none}.phone{border:0;border-radius:0;width:100vw;height:100vh}.status{height:34px}}
   </style>
-  <link rel="stylesheet" href="refined.css?v=1.0.1">
-  <link rel="stylesheet" href="experience.css?v=1.0.1">
-  <link rel="stylesheet" href="catalog.css?v=1.0.1">
-  <link rel="stylesheet" href="templates.css?v=1.0.1">
-  <link rel="stylesheet" href="pdf-library.css?v=1.0.1">
-  <link rel="stylesheet" href="pdf-editor.css?v=1.0.1">
-  <link rel="stylesheet" href="print-preview.css?v=1.0.1">
-  <link rel="stylesheet" href="device-ui.css?v=1.0.1">
-  <link rel="stylesheet" href="home-carousel.css?v=1.0.1">
-  <link rel="stylesheet" href="buttons.css?v=1.0.1">
-  <link rel="stylesheet" href="home-layout.css?v=1.0.1">
-  <link rel="stylesheet" href="editor-ui.css?v=1.0.1">
-  <link rel="stylesheet" href="editor-text.css?v=1.0.1">
-  <link rel="stylesheet" href="editor-elements.css?v=1.0.1">
-  <link rel="stylesheet" href="editor-data.css?v=1.0.1">
-  <link rel="stylesheet" href="editor-chrome.css?v=1.0.1">
-  <link rel="stylesheet" href="media-print.css?v=1.0.1">
-  <link rel="stylesheet" href="liquid-press.css?v=1.0.1">
-  <link rel="stylesheet" href="page-indicator.css?v=1.0.1">
-  <link rel="stylesheet" href="contrast.css?v=1.0.1">
+  <link rel="stylesheet" href="refined.css?v=1.0.2">
+  <link rel="stylesheet" href="experience.css?v=1.0.2">
+  <link rel="stylesheet" href="catalog.css?v=1.0.2">
+  <link rel="stylesheet" href="templates.css?v=1.0.2">
+  <link rel="stylesheet" href="pdf-library.css?v=1.0.2">
+  <link rel="stylesheet" href="pdf-editor.css?v=1.0.2">
+  <link rel="stylesheet" href="print-preview.css?v=1.0.2">
+  <link rel="stylesheet" href="device-ui.css?v=1.0.2">
+  <link rel="stylesheet" href="home-carousel.css?v=1.0.2">
+  <link rel="stylesheet" href="buttons.css?v=1.0.2">
+  <link rel="stylesheet" href="home-layout.css?v=1.0.2">
+  <link rel="stylesheet" href="editor-ui.css?v=1.0.2">
+  <link rel="stylesheet" href="editor-text.css?v=1.0.2">
+  <link rel="stylesheet" href="editor-elements.css?v=1.0.2">
+  <link rel="stylesheet" href="editor-data.css?v=1.0.2">
+  <link rel="stylesheet" href="editor-chrome.css?v=1.0.2">
+  <link rel="stylesheet" href="media-print.css?v=1.0.2">
+  <link rel="stylesheet" href="liquid-press.css?v=1.0.2">
+  <link rel="stylesheet" href="page-indicator.css?v=1.0.2">
+  <link rel="stylesheet" href="contrast.css?v=1.0.2">
+  <link rel="stylesheet" href="mobile-ui.css?v=1.0.2">
 </head>
 <body>
 <div class="app"><div class="workspace">
@@ -67,7 +68,7 @@
     <div id="pdf" class="screen"><div class="topbar"><button class="back" onclick="go('home')">‹</button><h1>编辑 PDF</h1><span class="top-action">⋯</span></div><div class="content"><div class="section-head"><h2>包裹标签.pdf</h2><span class="muted">第 1 / 6 页</span></div><div class="pdf-card"><div class="pdf-page"><h3>Parcel Post</h3><div class="bar"></div><p>To: Beatrice Ko<br/>3/69–71 Faraday Road<br/>CROYDON SOUTH VIC 3136</p><div class="qr"></div><p>Packaging　Physical weight<br/><b>OWN　　 500g</b></p><div class="bar" style="width:70%"></div></div><div class="pdf-tools"><button onclick="showModal('success','已进入裁剪模式','拖动页面边缘调整范围')">裁剪</button><button onclick="showModal('confirm','剔除这一页？','本次打印中将跳过第 1 页')">剔除本页</button><button onclick="showModal('success','已应用到全部页面','共 6 页')">应用全部</button></div></div><div class="form-card settings"><div class="row"><span>输出尺寸</span><b>100 × 150 mm ›</b></div><div class="row"><span>打印范围</span><b>1 – 6 ›</b></div></div><button class="primary full" onclick="go('preview')">去打印</button></div></div>
     <div id="preview" class="screen"><div class="topbar"><button class="back" onclick="go('editor')">‹</button><h1>打印预览 <small style="display:block;font-size:10px;color:var(--muted);font-weight:500">30 × 15 mm</small></h1><button class="top-action" onclick="toggleDirection()">↕</button></div><div class="content"><div style="text-align:center;color:var(--muted);font-size:12px;margin-bottom:10px">出纸方向 <b id="direction">↑</b></div><div class="preview-paper"><div class="bar"></div><div class="qr"></div><p><b>ESPrint P40</b><br/>收件人：Beatrice Ko<br/>标签内容预览示例<br/><br/>重量：500 g<br/>Ref: ES-2026-001</p><div class="bar" style="width:70%"></div></div><div class="print-setting"><div class="row"><span>打印机</span><b id="previewPrinter">未连接 ›</b></div><div class="row"><span>打印份数</span><b>1　＋</b></div><div class="row"><span>图像算法</span><b>抖动 ›</b></div><div class="row"><span>文本清晰度</span><b>标准 ›</b></div><div class="row"><span>偏移值</span><b>0 mm ›</b></div></div><button class="print-btn" id="printBtn" disabled onclick="printNow()">连接打印机后打印</button></div></div>
     <div id="templates" class="screen"><div class="topbar"><button class="back" onclick="go('home')">‹</button><h1>我的模板</h1><button class="top-action">⋯</button></div><div class="content"><div style="display:flex;gap:8px"><div class="search" style="flex:1"><span>⌕</span><input placeholder="搜索我的模板" /></div><button class="primary" style="height:44px;padding:0 14px" onclick="go('new')">＋</button></div><div class="folder-list"><button class="folder active">全部模板</button><button class="folder">默认文件夹</button><button class="folder">仓储标签</button></div><div class="template-large" onclick="go('editor')"><div class="thumb"><div class="label"></div></div><b>快递标签</b><div class="muted">100 × 150 mm · 今天 09:32</div></div><div class="template-large" onclick="go('editor')"><div class="thumb"><div class="label"></div></div><b>货架位置标签</b><div class="muted">30 × 15 mm · 昨天 15:20</div></div><div class="template-large" onclick="go('editor')"><div class="thumb"><div class="label"></div></div><b>价格标签</b><div class="muted">40 × 20 mm · 11 月 08 日</div></div></div></div>
-    <div id="mine" class="screen"><div class="topbar"><span class="top-action"></span><h1>我的</h1><span class="top-action">⚙</span></div><div class="content"><div class="mine-header"><div class="avatar">◎</div><div><b>未登录</b><div class="muted">登录后管理模板和收藏</div></div><button class="link" style="margin-left:auto" onclick="showModal('confirm','登录 ESPrint','登录后可保存线上模板')">登录 ›</button></div><div class="mine-list"><button onclick="showModal('success','本地打印记录','模板与 PDF 两个页签，保留最近记录')"><span>▤　本地打印记录</span><span>›</span></button><button><span>文　切换语言</span><small>中文　›</small></button><button><span>尺　切换单位</span><small>mm　›</small></button><button onclick="go('feedback')"><span>？　帮助中心</span><span>›</span></button><button><span>✉　联系我们</span><span>›</span></button><button><span>↗　版本更新</span><small>v1.0.1　›</small></button><button><span>ⓘ　关于 ESPrint</span><span>›</span></button></div></div></div>
+    <div id="mine" class="screen"><div class="topbar"><span class="top-action"></span><h1>我的</h1><span class="top-action">⚙</span></div><div class="content"><div class="mine-header"><div class="avatar">◎</div><div><b>未登录</b><div class="muted">登录后管理模板和收藏</div></div><button class="link" style="margin-left:auto" onclick="showModal('confirm','登录 ESPrint','登录后可保存线上模板')">登录 ›</button></div><div class="mine-list"><button onclick="showModal('success','本地打印记录','模板与 PDF 两个页签，保留最近记录')"><span>▤　本地打印记录</span><span>›</span></button><button><span>文　切换语言</span><small>中文　›</small></button><button><span>尺　切换单位</span><small>mm　›</small></button><button onclick="go('feedback')"><span>？　帮助中心</span><span>›</span></button><button><span>✉　联系我们</span><span>›</span></button><button><span>↗　版本更新</span><small>v1.0.2　›</small></button><button><span>ⓘ　关于 ESPrint</span><span>›</span></button></div></div></div>
     <div id="feedback" class="screen"><div class="topbar"><button class="back" onclick="go('home')">‹</button><h1>反馈组件</h1><span class="top-action"></span></div><div class="content"><div class="section-head"><h2>结果弹框</h2><span class="muted">统一视觉</span></div><div class="feedback-grid"><button class="feedback-card" onclick="showModal('loading','正在保存模板…','请稍候')"><span class="state">◌</span><p>Loading 弹框</p></button><button class="feedback-card" onclick="showModal('success','模板保存成功','已保存到我的模板')"><span class="state green">✓</span><p>成功弹框</p></button><button class="feedback-card" onclick="showModal('fail','打印机连接失败','请确认设备已开机并重试')"><span class="state red">×</span><p>失败弹框</p></button><button class="feedback-card" onclick="showModal('confirm','删除这条记录？','删除后无法恢复，但不会删除线上模板')"><span class="state amber">!</span><p>确定 / 取消</p></button></div><div class="section-head"><h2>Toast</h2><span class="muted">非阻塞反馈</span></div><div class="toast-demo"><button class="ok" onclick="toast('success','已连接打印机')">成功 Toast</button><button class="bad" onclick="toast('fail','连接失败，请重试')">失败 Toast</button><button class="warn" onclick="toast('warn','请先选择一个设备')">警告 Toast</button></div><div class="section-head"><h2>列表状态</h2></div><div class="card"><div style="display:flex;justify-content:space-between"><span>下拉刷新</span><button class="link" onclick="toast('success','刷新成功')">↻ 刷新</button></div><div class="muted" style="margin-top:12px">正在刷新 / 刷新失败 / 已加载全部，均保留现有内容。</div></div></div></div>
     <div class="bottom-nav"><button class="nav-item active" data-go="home" onclick="go('home')"><span data-icon="home"></span>首页</button><button class="nav-item" data-go="new" onclick="go('new')"><span data-icon="plus"></span>新增</button><button class="nav-item" data-go="mine" onclick="go('mine')"><span data-icon="user"></span>我的</button></div>
     <div class="modal-backdrop" id="modal"><div class="modal"><div id="modalIcon" class="modal-icon"><div class="spinner"></div></div><h3 id="modalTitle">正在处理…</h3><p id="modalText">请稍候</p><div class="modal-actions" id="modalActions"><button class="secondary" onclick="closeModal()">取消</button><button class="primary" onclick="closeModal()">确定</button></div></div></div>
@@ -87,29 +88,29 @@
   function toggleDirection(){const d=document.getElementById('direction');d.textContent=d.textContent==='↑'?'→':'↑';toast('success','出纸方向已更新')}
   document.getElementById('urlText').textContent=location.href;
 </script>
-<script src="refined.js?v=1.0.1"></script>
-<script src="catalog.js?v=1.0.1"></script>
-<script src="templates.js?v=1.0.1"></script>
-<script src="template-actions.js?v=1.0.1"></script>
-<script src="pdf-library.js?v=1.0.1"></script>
-<script src="pdf-processing.js?v=1.0.1"></script>
-<script src="pdf-editor.js?v=1.0.1"></script>
-<script src="print-preview.js?v=1.0.1"></script>
-<script src="print-offset.js?v=1.0.1"></script>
-<script src="experience.js?v=1.0.1"></script>
-<script src="device-ui.js?v=1.0.1"></script>
-<script src="page-indicator.js?v=1.0.1"></script>
-<script src="home-carousel.js?v=1.0.1"></script>
+<script src="refined.js?v=1.0.2"></script>
+<script src="catalog.js?v=1.0.2"></script>
+<script src="templates.js?v=1.0.2"></script>
+<script src="template-actions.js?v=1.0.2"></script>
+<script src="pdf-library.js?v=1.0.2"></script>
+<script src="pdf-processing.js?v=1.0.2"></script>
+<script src="pdf-editor.js?v=1.0.2"></script>
+<script src="print-preview.js?v=1.0.2"></script>
+<script src="print-offset.js?v=1.0.2"></script>
+<script src="experience.js?v=1.0.2"></script>
+<script src="device-ui.js?v=1.0.2"></script>
+<script src="page-indicator.js?v=1.0.2"></script>
+<script src="home-carousel.js?v=1.0.2"></script>
 <script src="vendor/bwip-js/bwip-js-min.js?v=4.7.0"></script>
-<script src="editor-ui.js?v=1.0.1"></script>
-<script src="editor-text.js?v=1.0.1"></script>
-<script src="editor-geometry.js?v=1.0.1"></script>
-<script src="editor-elements-render.js?v=1.0.1"></script>
-<script src="editor-elements.js?v=1.0.1"></script>
-<script src="editor-data.js?v=1.0.1"></script>
-<script src="editor-chrome.js?v=1.0.1"></script>
-<script src="photo-print.js?v=1.0.1"></script>
+<script src="editor-ui.js?v=1.0.2"></script>
+<script src="editor-text.js?v=1.0.2"></script>
+<script src="editor-geometry.js?v=1.0.2"></script>
+<script src="editor-elements-render.js?v=1.0.2"></script>
+<script src="editor-elements.js?v=1.0.2"></script>
+<script src="editor-data.js?v=1.0.2"></script>
+<script src="editor-chrome.js?v=1.0.2"></script>
+<script src="photo-print.js?v=1.0.2"></script>
 <script src="vendor/zxing/zxing.min.js?v=0.21.3"></script>
-<script src="scan-print.js?v=1.0.1"></script>
-<script src="liquid-press.js?v=1.0.1"></script>
+<script src="scan-print.js?v=1.0.2"></script>
+<script src="liquid-press.js?v=1.0.2"></script>
 </body></html>

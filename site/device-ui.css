@@ -30,13 +30,13 @@
 @keyframes device-radar-refresh { 0% { transform: scale(.34); opacity: 0; } 15% { opacity: .85; } 75% { opacity: .35; } 100% { transform: scale(1); opacity: 0; } }
 .device-sheet .scan-status { margin: 2px 0 30px; }
 .device-sheet .section-head { margin: 0 0 14px !important; }
-.device-sheet .section-head h2 { font-size: 14px !important; }
+.device-sheet .section-head h2 { font-size: 17px !important; }
 .device-sheet .device-refresh { display: grid; place-items: center; width: 32px; height: 32px; padding: 0; }
 .device-refresh svg { width: 13px; height: 13px; }
 .device-option { width: 100%; text-align: left; cursor: default; border: 1px solid #ffffffb8; background: var(--liquid-clear) !important; box-shadow: var(--liquid-shadow) !important; }
 .device-option-copy { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 5px; }
-.device-option-copy small { font-size: 9px; color: #5c6b85; white-space: nowrap; font-variant-numeric: tabular-nums; }
-.device-connect-button { flex-shrink: 0; height: 32px; min-width: 52px; padding: 0 11px; font-size: 11px; color: #4c5c76; }
+.device-option-copy small { font-size: 11px; color: #5c6b85; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.device-connect-button { flex-shrink: 0; height: 32px; min-width: 52px; padding: 0 11px; font-size: 13px; color: #4c5c76; }
 .device-sheet .center-title { font-size: 22px; }
 .device-sheet .detail-visual { height: 150px !important; margin-bottom: 0; }
 .device-connection-heading { margin: 0 0 26px; text-align: center; font-size: 20px; font-weight: 600; color: #4a596a; }
@@ -66,17 +66,17 @@
 .device-connecting-dialog[data-phase="success"] .device-link-orb > i { opacity: 0; }
 .device-connecting-dialog[data-phase="success"] .device-link-check { opacity: 1; transform: scale(1); }
 .device-connecting-dialog[data-phase="success"] .device-link-check path { stroke-dashoffset: 0; }
-.device-connecting-dialog h2 { font-size: 17px; font-weight: 600; color: #49576d; margin: 0 0 10px; transition: color .35s ease; }
+.device-connecting-dialog h2 { font-size: 20px; font-weight: 600; color: #49576d; margin: 0 0 10px; transition: color .35s ease; }
 .device-connecting-dialog[data-phase="success"] h2 { color: #546b62; }
-.device-connecting-dialog p { font-size: 11px; color: #596984; margin: 0 0 26px; }
-.device-connecting-dialog .secondary { height: 40px; min-height: 40px; font-size: 11px !important; }
+.device-connecting-dialog p { font-size: 13px; color: #596984; margin: 0 0 26px; }
+.device-connecting-dialog .secondary { height: 40px; min-height: 40px; font-size: 13px !important; }
 @media (max-width:760px) and (max-height:740px) {
  .device-sheet { height: calc(100% - var(--safe-top,62px) - 8px); }
  .device-sheet .device-sheet-header { height: 60px !important; flex-basis: 60px; }
  .device-sheet .scan-visual { height: 162px !important; }
  .device-radar { width: 164px; height: 164px; }
  .radar-core { width: 66px; height: 66px; border-radius: 23px; }
- .device-sheet .scan-status { margin-bottom: 20px; font-size: 9px; }
+ .device-sheet .scan-status { margin-bottom: 20px; font-size: 11px; }
  .device-sheet .detail-visual { height: 80px !important; margin-bottom: 0; }
  .device-connection-heading { font-size: 18px; margin-bottom: 16px; }
  .device-sheet .detail-visual svg { width: 64px; height: 64px; }

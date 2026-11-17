@@ -1,4 +1,4 @@
-/* V1.0.1: progressive navigation, iPhone 16 Pro layout, complete My pages.
+/* V1.0.2: progressive navigation, iPhone 16 Pro layout, complete My pages.
    All account, device, history and version data remain prototype demonstrations. */
 const preferences = { language: 'zh', unit: 'mm', displayName: 'ESPrint 用户' };
 // Set the project's official contact details here; empty values still open the app.
@@ -83,7 +83,7 @@ phoneEl.insertAdjacentHTML('beforeend',
     <a class="sub-card support-channel" role="button" href="whatsapp://send${supportContacts.whatsapp?'?phone='+encodeURIComponent(supportContacts.whatsapp.replace(/[^0-9]/g,'')):''}" onkeydown="if(event.key===' '){event.preventDefault();this.click()}"><span>${escapeText(supportContacts.whatsapp||'通过 WhatsApp 联系我们')}</span></a>
   `)+
   subpage('updates','版本更新',`
-    <div class="version-hero"><div class="version-logo">${svg('printer')}</div><h2>ESPrint</h2><p>Version 1.0.1 · 设计预览版</p></div>
+    <div class="version-hero"><div class="version-logo">${svg('printer')}</div><h2>ESPrint</h2><p>Version 1.0.2 · 设计预览版</p></div>
     <div class="version-status" id="update-status">${svg('info')}当前为交互原型</div>
     <div class="sub-card release-notes"><h3>更新内容</h3><p>· 标签创作、PDF 编辑与统一打印预览</p><p>· 模板、收藏与本地打印记录</p><p>· 更轻盈的液态玻璃界面</p></div>
     <p class="subnote">正式应用将查询发布服务，显示真实更新版本与说明。本原型不下载或安装任何软件。</p>
@@ -91,7 +91,7 @@ phoneEl.insertAdjacentHTML('beforeend',
     <button class="feedback-help-link" onclick="showUpdateExample()">查看发现新版本时的弹框</button>
   `)+
   subpage('about','关于 ESPrint',`
-    <div class="version-hero"><div class="version-logo">${svg('printer')}</div><h2>ESPrint</h2><p>Version 1.0.1 · 设计预览版</p></div>
+    <div class="version-hero"><div class="version-logo">${svg('printer')}</div><h2>ESPrint</h2><p>Version 1.0.2 · 设计预览版</p></div>
     <div class="sub-card">
       ${subrow('file','用户协议','','viewLegal(\'用户协议\')')}
       ${subrow('lock','隐私政策','','viewLegal(\'隐私政策\')')}
@@ -334,7 +334,7 @@ document.querySelector('#mine .mine-header').onclick=()=>authState.loggedIn?open
 const additionalPages=[['history','本地打印记录'],['language','切换语言'],['help','帮助中心'],['contact','联系我们'],['updates','版本更新'],['about','关于 ESPrint'],['settings','账号设置'],['profile','个人资料'],['terms','用户协议'],['privacy','隐私政策']];
 pages.push(...additionalPages);
 links.innerHTML=pages.map(([id,name])=>`<button data-page="${id}" onclick="go('${id}')">${name}</button>`).join('');
-document.querySelector('.side h2').textContent='ESPrint · V1.0.1';
+document.querySelector('.side h2').textContent='ESPrint · V1.0.2';
 document.querySelector('.side > p').textContent='iPhone 16 Pro 布局。顶部导航由透明随滚动渐变为毛玻璃；点击页面目录或手机界面体验全部流程。';
 document.querySelector('.side > p').insertAdjacentHTML('afterend','<span class="device-spec">iPhone 16 Pro · 402 × 874 pt</span>');
 

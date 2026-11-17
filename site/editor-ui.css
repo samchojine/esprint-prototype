@@ -80,7 +80,7 @@
 }
 #editor .float-tools button { width: 30px; min-width: 0; height: 36px; padding: 5px; display: grid; place-items: center; color: #475466; }
 #editor .float-tools svg { width: 20px; height: 20px; stroke-width: 1.6; }
-#editor .editor-zoom { position: absolute; bottom: 20px; left: 23px; pointer-events: none; color: #5c6d84; font-size: 10px; font-variant-numeric: tabular-nums; }
+#editor .editor-zoom { position: absolute; bottom: 20px; left: 23px; pointer-events: none; color: #5c6d84; font-size: 12px; font-variant-numeric: tabular-nums; }
 #editor .editor-dock {
   flex: 0 0 auto; position: relative; z-index: 5;
   border-radius: 24px 24px 0 0;
@@ -111,7 +111,7 @@
 #editor .element-grid button {
   display: flex; flex-direction: column; justify-content: center; align-items: center;
   min-width: 0; height: 70px; padding: 7px 0 5px; border: 0 !important;
-  color: #465163; font-size: 11px; font-weight: 500; gap: 5px;
+  color: #465163; font-size: 13px; font-weight: 500; gap: 5px;
   user-select: none; -webkit-user-drag: none;
 }
 #editor .element-grid .editor-menu-icon {
@@ -127,7 +127,7 @@
   gap: 14px; background: transparent !important; border: 0 !important;
   backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
 }
-#editor .bottom-actions button { height: 46px; min-height: 46px; font-size: 14px; }
+#editor .bottom-actions button { height: 46px; min-height: 46px; font-size: 17px; }
 .editor-text-input { display: block; width: 100%; min-height: 90px; margin-top: 14px; padding: 12px; resize: vertical; border: .75px solid #ffffffc7; border-radius: 13px; background: #edf2fa73; color: #404c5e; font: inherit; outline-color: #91a8d6; }
 @layer liquid-buttons {
   #editor .toolstrip button, #editor .float-tools button, #editor .element-grid button, #editor .editor-menu-dots button {

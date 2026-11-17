@@ -4,14 +4,14 @@
   :root {
     --liquid-clear:
       radial-gradient(ellipse at 14% 0%, #ffffffa6, transparent 67%),
-      linear-gradient(130deg, #ffffff94, #e5edfa59 55%, #e8e4f55e);
+      linear-gradient(130deg, #ffffff80, #cbdcf773 55%, #d6ccf078);
     --liquid-primary:
-      radial-gradient(ellipse at 15% 0%, #ffffffa1, transparent 65%),
-      radial-gradient(ellipse at 100% 100%, #bcbdf461, transparent 65%),
-      linear-gradient(115deg, #cddff9c2, #dde6f8bd 48%, #e3daf0b0);
+      radial-gradient(ellipse at 15% 0%, #ffffff8c, transparent 65%),
+      radial-gradient(ellipse at 100% 100%, #a3a2ef73, transparent 65%),
+      linear-gradient(115deg, #a9c9ffc9, #c0d5fac7 48%, #cbb8edc2);
     --liquid-selected:
       radial-gradient(ellipse at 20% 0%, #ffffffb3, transparent 66%),
-      linear-gradient(135deg, #e4efffc2, #ccdaf994 55%, #d9d8f59c);
+      linear-gradient(135deg, #c8dfffc2, #b0c8f4b3 55%, #c5bcf0b8);
     --liquid-muted:
       radial-gradient(ellipse at 14% 0%, #ffffff66, transparent 67%),
       linear-gradient(130deg, #eef1f7a6, #e0e6f185 55%, #e9eaf399);
